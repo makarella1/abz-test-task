@@ -16,6 +16,7 @@ https://abz-test-task-841c6.web.app <br>
 <ul>
 <li><strong>Redux Toolkit</strong> (RTK Query for sending requests and Redux Toolkit for managing the state)</li>
 <li><strong>SCSS</strong></li>
+<li><strong>react-tooltip</strong></li>
 </ul>
 <hr>
 <h2>Summary</h2>
