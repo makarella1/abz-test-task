@@ -1,0 +1,61 @@
+[type='radio']:checked + label,
+[type='radio']:not(:checked) + label {
+  position: relative;
+
+  padding-left: 32px;
+  cursor: pointer;
+
+  display: inline-block;
+}
+
+[type='radio']:checked + label::before,
+[type='radio']:not(:checked) + label::before {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  top: 3px;
+
+  width: 20px;
+  height: 20px;
+
+  border: 1px solid $input-field;
+  border-radius: 50%;
+
+  transition: border-color 150ms ease-in;
+  -webkit-transition: border-color 150ms ease-in;
+}
+
+[type='radio']:checked + label::after,
+[type='radio']:not(:checked) + label::after {
+  content: '';
+
+  position: absolute;
+  left: 5px;
+  top: 8px;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background-color: $secondary;
+
+  transition: all 150ms ease-in;
+  -webkit-transition: all 150ms ease-in;
+}
+
+[type='radio']:checked + label::before {
+  border-color: $secondary;
+}
+
+[type='radio']:not(:checked) + label::after {
+  opacity: 0;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+}
+[type='radio']:checked + label::after {
+  opacity: 1;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+}

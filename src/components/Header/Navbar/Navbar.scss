@@ -1,0 +1,38 @@
+@import '../../../common/styles/colors.scss';
+
+.nav {
+  background-color: $white;
+
+  height: 54px;
+  padding: 11px 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__logo-img {
+    width: 104px;
+    height: 26px;
+  }
+
+  &__users-btn {
+    margin-right: 10px;
+  }
+
+  &__logo {
+    cursor: pointer;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    //Width of two buttons + margin between them
+    width: 210px;
+    //Just to make it pixel-perfect
+    margin-bottom: 7px;
+  }
+}

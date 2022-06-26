@@ -1,0 +1,28 @@
+//Custom preloader before the page renders
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  z-index: 9999;
+
+  &__img {
+    animation: rotation 1s infinite;
+    -webkit-animation: rotation 1s infinite;
+    margin: auto;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}

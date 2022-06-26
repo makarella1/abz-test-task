@@ -1,0 +1,18 @@
+@import './common/styles/reset.scss';
+@import './common/styles/colors.scss';
+@import './common/styles/radio.scss';
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  background-color: $background;
+
+  font-size: 16px;
+  line-height: 26px;
+
+  h1,
+  h2 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}

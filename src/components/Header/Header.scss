@@ -1,0 +1,72 @@
+@import '../../common/styles/colors.scss';
+
+.header {
+  margin-bottom: 140px;
+
+  //Defining common features of header's buttons
+  button {
+    width: 100px;
+    height: 34px;
+
+    text-align: center;
+
+    color: $black;
+  }
+
+  &__content {
+    color: $white;
+
+    max-width: 1170px;
+    height: 650px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-image: url('../../images/header/extraLargeHeaderImg.png');
+
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__content-block {
+    width: 380px;
+  }
+
+  &__title {
+    margin-bottom: 21px;
+  }
+
+  &__text {
+    margin-bottom: 32px;
+  }
+
+  //Setting different images based on screen size to make pixel-perfect layout
+  @media (max-width: 1200px) {
+    &__content {
+      background-image: url('../../images/header/largeHeaderImg.png');
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__content {
+      height: 500px;
+      background-image: url('../../images/header/mediumHeaderImg.png');
+    }
+  }
+
+  @media (max-width: 360px) {
+    &__content {
+      background-image: url('../../images/header/smallHeaderImg.png');
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__content-block {
+      width: 324px;
+      margin-bottom: 31px;
+    }
+  }
+}

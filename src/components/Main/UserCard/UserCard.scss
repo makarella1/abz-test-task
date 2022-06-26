@@ -1,0 +1,59 @@
+@import '../../../common/styles/colors.scss';
+
+.card {
+  padding: 20px;
+  text-align: center;
+
+  background-color: $white;
+
+  border-radius: 10px;
+
+  &__photo {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+  }
+
+  &__wrapper {
+    width: 330px;
+  }
+
+  &__photo {
+    margin-bottom: 12px; //Neglecting the styleguide to make a pixel-prefect layout
+  }
+  &__name {
+    margin-bottom: 20px;
+  }
+  &__email {
+    cursor: pointer;
+  }
+  &__tooltip {
+    padding: 3px 16px !important; //"important" for the sake of pixel-perfect but it's not a really big deal here
+  }
+
+  //Making sure that text doesn't go beyond the card
+  p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  @media (max-width: 1200px) {
+    &__wrapper {
+      width: 242px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__wrapper {
+      width: 304px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__wrapper {
+      width: 288px;
+    }
+  }
+}

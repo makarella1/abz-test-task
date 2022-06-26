@@ -1,0 +1,43 @@
+@import '../../common/styles/colors.scss';
+
+.content {
+  color: $black;
+
+  text-align: center;
+  margin-bottom: 140px;
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 29px;
+
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  &__btn {
+    width: 120px;
+    height: 34px;
+  }
+
+  &__error {
+    color: $error;
+  }
+
+  @media (max-width: 768px) {
+    &__container {
+      gap: 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__container {
+      gap: 20px;
+    }
+  }
+}

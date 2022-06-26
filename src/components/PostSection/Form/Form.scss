@@ -1,0 +1,203 @@
+@import '../../../common/styles/colors.scss';
+
+.form {
+  &__input-container {
+    margin-bottom: 50px;
+
+    position: relative; //Making the container relative so we have our label sticked to the input
+
+    &:nth-child(3) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+
+    border: 1px solid $input-field;
+    border-radius: 4px;
+
+    padding: 13px 13px;
+
+    //Changing the sibling element (label) when the input is focused
+    &:focus ~ .form__label, 
+    //We're keeping the label at the top if the placeholder IS NOT SHOWN (means that we have a value inside the input)
+    &:not(:placeholder-shown) ~ .form__label {
+      top: -13px;
+
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    &_error {
+      border-color: $error;
+    }
+  }
+
+  &__label {
+    color: $text-secondary;
+
+    position: absolute;
+    left: 13px;
+    top: 14px;
+
+    cursor: text; //We don't want our cursor to look different in comparison to the input
+    pointer-events: none; //Label should ignore any clicks
+
+    transition: top 300ms ease-in, left 300ms ease-in, font-size 300ms ease-in,
+      font-weight 300ms ease-in; //Keeping the animations same because we need them to look synchronously
+
+    -webkit-transition: top 300ms ease-in, left 300ms ease-in,
+      font-size 300ms ease-in, font-weight 300ms ease-in;
+
+    //Setting the background color and padding to create some space bettwen the label and input's border
+    background-color: $background;
+
+    padding: 0 4px 0 3px; //Pixel-perfect :)
+
+    &_error {
+      color: $error;
+    }
+  }
+
+  &__hint {
+    font-size: 12px;
+    line-height: 14px;
+
+    color: $text-secondary;
+
+    margin-left: 16px;
+    margin-top: 4px;
+
+    &_error {
+      color: $error;
+    }
+  }
+
+  &__text {
+    margin-bottom: 10px;
+  }
+
+  &__radio-wrapper {
+    margin-bottom: 47px;
+  }
+
+  &__radio {
+    margin-bottom: 7px;
+  }
+
+  &__upload {
+    position: relative;
+    margin-bottom: 50px;
+  }
+
+  &__file {
+    padding: 28px 28px 0 0;
+
+    width: 100%;
+
+    position: relative;
+    font-size: 0px; //Hiding any text in this input to create a custom layout
+
+    &::-webkit-file-upload-button {
+      visibility: hidden;
+      font-size: 0px;
+    }
+
+    &::before {
+      //Creating custom "Uplaod" button by hiding the regular one
+      content: 'Upload';
+
+      position: absolute;
+
+      font-family: 'Nunito', sans-serif;
+      font-size: 16px;
+      color: $black;
+
+      cursor: pointer;
+
+      top: 0;
+      left: 0;
+
+      height: 100%;
+      width: 83px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border: 1px solid $black;
+      border-radius: 4px 0 0 4px;
+    }
+
+    &_error {
+      &::before {
+        border-color: $error;
+      }
+    }
+  }
+
+  &__file-label {
+    position: absolute;
+
+    color: $text-secondary;
+
+    top: 0;
+    left: 0;
+
+    cursor: pointer;
+
+    padding: 13px 13px 13px 16px;
+
+    border: 1px solid $input-field;
+    border-radius: 0 4px 4px 0;
+    border-left: none;
+
+    //Custom "Upload" button is 83px width so we need to make some space for it
+    margin-left: 83px;
+
+    //Fitting our custom input to the form-wrapper which is 380px width
+    width: 297px;
+
+    &_active {
+      color: $black;
+    }
+  }
+
+  &__submit-btn {
+    display: block;
+
+    width: 100px;
+    height: 34px;
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  &__signup-error,
+  &__radio-error {
+    color: $error;
+  }
+
+  &__radio-error {
+    margin-bottom: 10px;
+  }
+
+  &__signup-error {
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    &__file-label {
+      width: 245px; //As form-container got smaller on 52px as well
+    }
+  }
+}
+
+.form-loader {
+  width: 380px;
+
+  @media (max-width: 480px) {
+    width: 324px;
+  }
+}

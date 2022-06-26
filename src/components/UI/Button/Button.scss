@@ -1,0 +1,17 @@
+@import '../../../common/styles/colors.scss';
+
+.btn {
+  background-color: $primary;
+  border-radius: 80px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover;
+  }
+
+  &_disabled {
+    background-color: $disabled;
+    pointer-events: none;
+    color: $btn-disabled;
+  }
+}

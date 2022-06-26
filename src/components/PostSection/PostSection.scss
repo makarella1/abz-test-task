@@ -1,0 +1,21 @@
+@import '../../common/styles/colors.scss';
+
+.post {
+  margin-bottom: 100px;
+
+  &__title {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  &__form-wrapper {
+    width: 380px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 480px) {
+    &__form-wrapper {
+      width: 328px;
+    }
+  }
+}

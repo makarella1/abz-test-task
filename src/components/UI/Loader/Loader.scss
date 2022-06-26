@@ -1,0 +1,26 @@
+.loader {
+  width: 500px;
+  height: 500px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__img {
+    width: 48px;
+    height: 48px;
+    animation: rotation 1s infinite;
+    -webkit-animation: rotation 1s infinite;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
