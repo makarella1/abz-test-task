@@ -15,8 +15,7 @@ https://abz-test-task-841c6.web.app <br>
 <h2>Which libraries were used?</h2>
 <ul>
 <li><strong>Redux Toolkit</strong> (RTK Query for sending requests and Redux Toolkit for managing the state)</li>
-<li><strong>SCSS</strong></li>
-<li><strong>react-tooltip</strong></li>
+<li><strong>react-tooltip</strong> (Didn't want to reinvent the wheel with all these tooltips)</li>
 </ul>
 <hr>
 <h2>Summary</h2>
